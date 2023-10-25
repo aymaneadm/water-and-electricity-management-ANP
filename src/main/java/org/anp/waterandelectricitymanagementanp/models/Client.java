@@ -15,7 +15,7 @@ import static org.yaml.snakeyaml.nodes.Tag.NULL;
 public class Client implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE) //
-    private Long idClient ;
+    private String idClient ;
     private String ice;
     private String secteurActivite;
     private String DentifiantFiscal;
@@ -27,7 +27,7 @@ public class Client implements Serializable {
     private Port port;
     @ManyToOne(fetch = FetchType.LAZY)
     private Police police;
-    @OneToOne(fetch = FetchType.LAZY)
+    @Enumerated
     private TypeClient typeClient;
 
     public void ajouterPolice(Police police){

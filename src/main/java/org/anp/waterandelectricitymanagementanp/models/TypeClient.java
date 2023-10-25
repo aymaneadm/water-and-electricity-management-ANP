@@ -7,15 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class TypeClient  implements Serializable {
-    @Id // definir cle primaire
-    @GeneratedValue(strategy= GenerationType.SEQUENCE) //
-
-    @OneToOne(fetch = FetchType.LAZY)
-    private Client client;
-    private String type;
+public enum TypeClient {
+    PARTICULIER,ENTREPRISE
 }
