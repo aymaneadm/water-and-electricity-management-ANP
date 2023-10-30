@@ -29,14 +29,4 @@ public class Client implements Serializable {
     private Police police;
     @Enumerated
     private TypeClient typeClient;
-
-    public void ajouterPolice(Police police){
-        this.police = police;
-    }
-    public void annulerPolice(){
-        this.police = new Police();
-    }
-    public void consulterReleve(){
-
-    }
 }
