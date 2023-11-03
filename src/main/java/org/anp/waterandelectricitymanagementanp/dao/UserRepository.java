@@ -10,6 +10,6 @@ public interface UserRepository extends JpaRepository<User,String> {
     @Override
     User save(User user);
     void delete(User user);
-    User findUserByidUser(String idUser);
+    User findUserByEmail(String email);
     List<User> findAll();
 }
